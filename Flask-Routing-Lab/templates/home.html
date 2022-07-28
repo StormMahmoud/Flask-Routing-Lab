@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="static/js/script.js"></script>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
 
+<h1><center> Ebay</center></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Catagories:</h2>
+    </div>
+    <div class="col-sm-4">
+      <a href="{{url_for('product')}}"><h2>products</h2></a>
+    </div>
+  </div>
+</div>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">shoes</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">bottles</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">toys</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>shoes</h3>
+  <img src = "https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/341e2ed9-9797-4f15-8d4f-265071377068/air-force-1-07-lv8-shoes-7j2wDJ.png" >
+  <a href="{{url_for('cart')}}"><button> add to cart </button></a>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>bottles</h3>
+  <img src = "https://cdn.shopify.com/s/files/1/0594/2385/0693/products/674_01_1024x.png?v=1644249995" width = "120px" height = "240px">
+  <a href="{{url_for('cart')}}"><button> add to cart </button></a>
+</div>
+
+
+<div id="Tokyo" class="tabcontent">
+  <h3>toys</h3>
+  <img src = "https://i.guim.co.uk/img/media/f759cc2fab05664bca943dad0adc330cd0984d5e/99_0_767_959/master/767.jpg?width=380&quality=85&fit=max&s=5bfb777f80bdbca1ec12fead228c47b2" >
+  <a href="{{url_for('cart')}}"><button> add to card </button></a>
+</div>
+<a href="{{url_for('product')}}">products</a>
 </body>
 </html>
